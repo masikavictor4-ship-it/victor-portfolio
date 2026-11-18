@@ -11,6 +11,9 @@ const LINKEDIN =
 
 const GITHUB = "https://github.com/masikavictor4-ship-it";
 
+const EMAIL_LINK =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=masikavictor4@gmail.com&su=Professional%20Opportunity";
+
 const skills = [
   {
     title: "Web Development",
@@ -383,14 +386,16 @@ export default function Home() {
         <div className="contact-details">
           <div className="contact-item">
             <span>Email address</span>
-            <a href="mailto:masikavictor4@gmail.com">
+            <a href={EMAIL_LINK} target="_blank" rel="noopener noreferrer">
               masikavictor4@gmail.com
             </a>
           </div>
 
           <div className="contact-item">
             <span>University email</span>
-            <a href="mailto:vwmasika20@student.kibu.ac.ke">
+            <a
+              href="mailto:vwmasika20@student.kibu.ac.ke"
+            >
               vwmasika20@student.kibu.ac.ke
             </a>
           </div>
@@ -414,7 +419,9 @@ export default function Home() {
 
           <a
             className="button secondary"
-            href="mailto:masikavictor4@gmail.com"
+            href={EMAIL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Send Me an Email ↗
           </a>
