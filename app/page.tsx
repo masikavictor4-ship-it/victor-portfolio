@@ -21,7 +21,7 @@ const skills = [
   },
   {
     title: "Programming & Databases",
-    items: ["Python", "Flask", "Java", "SQL", "Supabase"],
+    items: ["Python", "Flask", "Java", "SQL", "Supabase", "SQLite", "Prisma"],
   },
   {
     title: "AI Training & Data Work",
@@ -41,15 +41,24 @@ const skills = [
 const projects = [
   {
     number: "01",
-    title: "LimaFika",
-    category: "Web Application · Marketplace",
+    title: "SokoMtaani",
+    category: "Web Application · E-commerce Marketplace",
     description:
-      "A marketplace and delivery platform designed to connect customers with products around Bungoma, Kenya. My development work explores product listings, shopping carts, checkout, order management and delivery workflows.",
+      "A local online marketplace designed to connect customers and sellers through a digital shopping platform. The project includes product listings, user authentication, shopping experiences and marketplace management, using a modern web stack with a local SQLite database.",
+    tech: ["Next.js", "React", "Prisma", "SQLite", "TypeScript"],
+    status: "Development project",
+  },
+  {
+    number: "02",
+    title: "LimaFika",
+    category: "Web Application · Marketplace & Delivery",
+    description:
+      "A marketplace and delivery platform designed to connect customers with products around Bungoma, Kenya. The project explores product listings, shopping carts, checkout, order management and delivery workflows.",
     tech: ["Next.js", "React", "Supabase", "TypeScript"],
     status: "In development",
   },
   {
-    number: "02",
+    number: "03",
     title: "TheLastPromise",
     category: "Game Development · 3D",
     description:
@@ -58,7 +67,7 @@ const projects = [
     status: "Learning project",
   },
   {
-    number: "03",
+    number: "04",
     title: "Victor Portfolio",
     category: "Web Development · Personal Project",
     description:
@@ -151,21 +160,11 @@ export default function Home() {
           <a href="#opportunities" onClick={closeMenu}>Opportunities</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
 
-          <a
-            href={GITHUB}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-          >
+          <a href={GITHUB} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
             GitHub ↗
           </a>
 
-          <a
-            href={LINKEDIN}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-          >
+          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
             LinkedIn ↗
           </a>
         </div>
@@ -336,9 +335,7 @@ export default function Home() {
 
       {/* EXPERIENCE */}
       <section className="projects section" id="experience">
-        <div className="section-label">
-          03 / RELEVANT EXPERIENCE
-        </div>
+        <div className="section-label">03 / RELEVANT EXPERIENCE</div>
 
         <h2 className="section-title">
           Experience and practical learning<span>.</span>
@@ -353,11 +350,8 @@ export default function Home() {
           {experience.map((item) => (
             <article className="project-card" key={item.number}>
               <div className="project-number">{item.number}</div>
-
               <div className="project-icon">✳</div>
-
               <p className="project-category">{item.category}</p>
-
               <h3>{item.title}</h3>
 
               <p className="project-description">
@@ -391,11 +385,8 @@ export default function Home() {
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
               <div className="project-number">{project.number}</div>
-
               <div className="project-icon">✳</div>
-
               <p className="project-category">{project.category}</p>
-
               <h3>{project.title}</h3>
 
               <p className="project-description">
@@ -414,9 +405,7 @@ export default function Home() {
         </div>
 
         <div className="github-note">
-          <p>
-            Interested in exploring my development work?
-          </p>
+          <p>Interested in exploring my development work?</p>
 
           <a
             href={GITHUB}
@@ -431,9 +420,7 @@ export default function Home() {
 
       {/* OPPORTUNITIES */}
       <section className="opportunities section" id="opportunities">
-        <div className="section-label">
-          05 / PROFESSIONAL OPPORTUNITIES
-        </div>
+        <div className="section-label">05 / PROFESSIONAL OPPORTUNITIES</div>
 
         <h2 className="section-title">
           How I can contribute<span>.</span>
@@ -448,9 +435,7 @@ export default function Home() {
           {opportunities.map((item) => (
             <article className="opportunity-card" key={item.title}>
               <div className="opportunity-icon">{item.icon}</div>
-
               <h3>{item.title}</h3>
-
               <p>{item.description}</p>
             </article>
           ))}
